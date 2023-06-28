@@ -25,7 +25,7 @@
             </div>
         </a>
         <div class="signup_body">
-            <form class="login_form" method='POST' enctype="multipart/form-data">
+            <form class="login_form" method='POST' action="" enctype="multipart/form-data">
                 {% csrf_token %}
                 <label for="login-username" class="label">
                     Email address or username
@@ -36,10 +36,12 @@
                     Password
                 </label>
                 <input type="password" class="form_input" name="password" placeholder="Password" required>
-                {% if not case %}
-                <span style="color:#f79862;
-                             padding-bottom:20px;
-                             text-align:center;">Username or password invalid</span>
+                {% if messages %}
+                    {% for message in messages %}
+                        <span style="color:#f79862;
+                                    padding-bottom:20px;
+                                    text-align:center;">{{message}}</span>
+                    {% endfor %}
                 {% endif %}
                 <button class='btn btn_log_in' type="submit">Log in</button>
                 <div class="divider"></div>

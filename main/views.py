@@ -36,6 +36,10 @@ def IsPasswordSecure(password):
 
 CONTAINER = json.load(f)
 
+
+def HomeView(request):
+   return render(request, 'home/home.html',{})
+
 @login_required(login_url='login')
 def default(request):
 

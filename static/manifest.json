@@ -1,0 +1,24 @@
+{
+  "entrypoints": {
+    "index": {
+      "assets": {
+        "js": [
+          "http://localhost:9091/js/runtime.js",
+          "http://localhost:9091/js/vendors-node_modules_mini-css-extract-plugin_dist_hmr_hotModuleReplacement_js-node_modules_we-27b122.js",
+          "http://localhost:9091/js/index.js"
+        ],
+        "css": [
+          "http://localhost:9091/css/index.css"
+        ]
+      }
+    }
+  },
+  "index.css": "http://localhost:9091/css/index.css",
+  "index.js": "http://localhost:9091/js/index.js",
+  "js/vendors-node_modules_mini-css-extract-plugin_dist_hmr_hotModuleReplacement_js-node_modules_we-27b122.js": "http://localhost:9091/js/vendors-node_modules_mini-css-extract-plugin_dist_hmr_hotModuleReplacement_js-node_modules_we-27b122.js",
+  "runtime.js": "http://localhost:9091/js/runtime.js",
+  "vendors/.gitkeep": "http://localhost:9091/vendors/.gitkeep",
+  "vendors/images/.gitkeep": "http://localhost:9091/vendors/images/.gitkeep",
+  "vendors/images/sample.jpg": "http://localhost:9091/vendors/images/sample.jpg",
+  "vendors/images/webpack.png": "http://localhost:9091/vendors/images/webpack.png"
+}

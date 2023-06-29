@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.facebook',
-    'crispy_forms',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -221,3 +221,8 @@ LOGIN_REDIRECT_URL = 'default'
 LOGOUT_REDIRECT_URL = 'login'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Specify custom form to use in the django_allauth
+ACCOUNT_FORMS = {
+    'signup' : 'main.forms.CustomSignUpForm',
+}

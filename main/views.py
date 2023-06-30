@@ -40,7 +40,7 @@ CONTAINER = json.load(f)
 def HomeView(request):
    return render(request, 'home/home.html',{})
 
-@login_required(login_url='login')
+@login_required(login_url='account_login')
 def default(request):
 
     user_obj = User.objects.filter(username=request.user).first()
@@ -110,6 +110,7 @@ def add_playlist(request):
         song_albumsrc = song__albumsrc,
         song_channel=request.POST['channel'], song_date_added=request.POST['date'],song_youtube_id=request.POST['songid'])
 
+
 def login_user(request, message = ""):
    if request.method == 'POST':
       username = request.POST['username']
@@ -124,7 +125,7 @@ def login_user(request, message = ""):
         messages.success(request, ("Incorrect username / password"))
         return redirect('login')
    else: 
-      return render(request, 'login.html', {'message':message})
+      return render(request, 'account/login.html', {'providers':[]})
    
 def logout_user(request):
    logout(request)
@@ -166,7 +167,7 @@ def register_user(request):
      except Exception as e:
       print(e)
   else:
-    return render(request, 'signup.html')
+    return render(request, 'account/signup.html')
 
 @login_required(login_url='login')
 def TokenSend(request):
@@ -190,6 +191,7 @@ def error_page(request):
    return render(request, 'error.html')
 
 @login_required(login_url='login')
+
 def success_page(request):
    return render(request, 'success.html')
 

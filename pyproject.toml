@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 python-webpack-boilerplate = "^1.0.1"
+django-widget-tweaks = "^1.4.12"
 
 
 [build-system]

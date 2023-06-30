@@ -6,7 +6,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic Django Project</title>
+  <link rel="icon" href="https://cdn.discordapp.com/icons/715958380556058684/773d6583cd1d7aef41e701783d353aef.webp?size=128" type="image/x-icon">
+  <meta name="description" itemprop="description"
+  content="Play your playlists and favourites tracks, albums, and artists " />
+  <meta name="keywords"
+    content="convert, convert playlists, transfer, syncing, smart links, free, apple music, streaming services" />
+  <link rel="stylesheet" href="{% static 'player.css' %}?{% now " U " %}"> {% block css %} {% endblock %}
+  <title>Youttify</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 
   {% stylesheet_pack 'index' %} <!-- new, referring to index.css --> 
   {% javascript_pack 'index' attrs='defer' %} <!-- new, referring to index.js -->
